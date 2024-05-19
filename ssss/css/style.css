@@ -508,8 +508,6 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
   grid-auto-rows: auto;
-  grid-template-areas:
-    "1 2 form form";
 }
 .cards__item {
 }
@@ -631,8 +629,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  grid-area: form;
 }
 
 
@@ -765,15 +761,9 @@ color: #999999;
 @media screen and (max-width: 1200px) {
   .cards {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: none;
     /* max-width: 846px; */
     margin: 0 auto;
   }  
-
-  .card__inner {
-    max-width: 846px;
-
-  }
   .form {
     grid-column: 1/3;
   }
@@ -789,7 +779,7 @@ color: #999999;
   
   .card__inner {
     margin: 0 auto;
-    max-width: 443px;
+    /* max-width: 443px; */
   }
 
   .form_inner {
