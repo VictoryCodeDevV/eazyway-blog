@@ -1,6 +1,6 @@
 <?php echo $header; ?>
 <main class="site-main blog-categories">
-	<div class="container">
+	<div class="container blog__container">
 		<div class="blog-categories__breadcrumbs page-categories__breadcrumbs breadcrumbs">
 			<div class="breadcrumbs__list">
 	<?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
@@ -12,7 +12,6 @@
 	<?php } ?>
 			</div>
 		</div>
-		<div class="container blog__container">
 			<aside class="blog__tabs">
 				<?php echo $column_left; ?>
 			</aside>
@@ -21,8 +20,7 @@
 
 				<div class="catalog__top">
 					<div class="catalog__top-wrapper">
-						<div class="current-category current-category--desktop"><?php echo $blog['category']; ?></div>
-
+						<div class="current-category current-category--desktop"><?php echo $heading_title; ?>;</div>
 					</div>
 				</div>
 				
@@ -33,8 +31,7 @@
 						<div class="cards__item card">
 							<a href='<?php echo $blog['href']; ?>' class="card__inner">
                         		<div class="card__img img-wrapper">
-                        		    <span class="card__category"><?php echo $blog['tag']; ?></span>
-									<span class="card__category"><?php print_r($blog) ; ?></span>
+                        		    <span class="card__category"><?php echo $heading_title; ?></span>
 									<picture><source srcset="<?php echo $blog['image']; ?>" type="image/webp"><img src="<?php echo $blog['image']; ?>" alt=""></picture>
                         		</div>
                         		<div class="card__content">
@@ -48,8 +45,7 @@
                         		        <span>Читать далее</span>
                         		    </div>
                         		</div>
-                    		</a>	
-
+                    		</a>
 						</div>
 						<?php } ?>
 
@@ -93,7 +89,7 @@
 
 
                 </div>
-					</div>
+				
 					<?php }else{ ?>
 		<p><?php echo $text_no_results; ?></p>
 	<?php } ?>
@@ -101,8 +97,8 @@
 
 			</div>
 		</div>
-
-	 <?php echo $content_bottom; ?>
 	</div>
 </main>
+
+
 <?php echo $footer; ?> 
